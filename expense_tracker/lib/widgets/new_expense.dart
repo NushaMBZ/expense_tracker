@@ -139,10 +139,10 @@ class _NewExpenseState extends State<NewExpense>{
                 value: _selectedCategory,
                 items: Category.values
                   .map(
-                    (category) => DropdownMenuItem(
+                    (Category) => DropdownMenuItem(
                       value: Category,
                       child: Text(
-                       category.name
+                       Category.name
                       ),
                     ),
                   )
@@ -152,7 +152,7 @@ class _NewExpenseState extends State<NewExpense>{
                     return;
                   }
                   setState(() {
-                    _selectedCategory = value as Category;
+                    _selectedCategory = value;
                   });
                 },
               ),
